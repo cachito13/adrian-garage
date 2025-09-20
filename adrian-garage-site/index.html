@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrián Garage - Taller y Restauración</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Adrián Garage - Taller y restauración de motos. Service, pintura y proyectos personalizados.">
+  <meta name="keywords" content="taller de motos, restauración, pintura, mecánica, Adrián Garage">
+  <meta name="author" content="Adrián Garage">
+
+  <!-- Favicon -->
+  <link rel="icon" href="tu-logo.png" type="image/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos extra -->
+  <style>
+    .card:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 999;
+    }
+    /* Ajuste mapa */
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<!-- Header con imagen de fondo y logo -->
+<header class="text-white d-flex align-items-center" 
+        style="background: url('portada.jpg') center/cover no-repeat; height: 250px; position: relative;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Título -->
+    <div>
+      <h1 class="display-4 fw-bold">Adrián Garage</h1>
+      <p class="lead">Taller y Restauración de Motos</p>
+    </div>
+    <!-- Logo -->
+    <div>
+      <img src="logo.png" alt="Logo Adrián Garage" style="height: 100px; width: auto;">
+    </div>
+  </div>
+</header>
+<!-- Quiénes Somos -->
+<section class="container py-5 text-center">
+  <h2 class="mb-4">Quiénes Somos</h2>
+  <p>
+    En <strong>Adrián Garage</strong> somos un taller integral de motos, dedicados a brindar soluciones completas para tu vehículo.  
+    Nos especializamos en <strong>mecánica, pintura, electricidad, plásticos y accesorios</strong>, garantizando que cada moto reciba el mejor cuidado posible.  
+    Además, ofrecemos servicios de <strong>compra y venta de motos usadas</strong>, asesorando a nuestros clientes en cada paso para que puedan encontrar la opción que mejor se adapte a sus necesidades.  
+    Nuestro equipo trabaja con <strong>profesionalismo, experiencia y pasión</strong>, para que tu moto quede en las mejores condiciones y puedas disfrutarla al máximo.
+  </p>
+  <p>
+    Realizamos desde mantenimientos básicos hasta restauraciones completas, asegurándonos de que cada detalle, por pequeño que sea, cumpla con los más altos estándares.  
+    En <strong>Adrián Garage</strong> tu moto está en buenas manos.
+  </p>
+</section>
+  <!-- Imagen del taller -->
+<section class="text-center py-4">
+  <img src="foto1.jpg" alt="Taller Adrián Garage" 
+       class="img-fluid rounded shadow mx-auto d-block" 
+       style="max-width: 800px;">
+</section>
+
+<!-- Carrusel de fotos -->
+<section class="container py-4">
+  <h2 class="text-center mb-4">Nuestros Trabajos</h2>
+  <div id="carruselMotos" class="carousel slide shadow mx-auto carrusel-limitado" data-bs-ride="carousel" style="max-width: 700px;">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="foto4.jpg" class="d-block w-100 rounded carrusel-img" alt="Proyecto 1">
+      </div>
+      <div class="carousel-item">
+        <img src="foto2.jpg" class="d-block w-100 rounded carrusel-img" alt="Proyecto 2">
+      </div>
+      <div class="carousel-item">
+        <img src="foto3.jpg" class="d-block w-100 rounded carrusel-img" alt="Proyecto 3">
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselMotos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselMotos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- CSS para altura uniforme -->
+<style>
+  .carrusel-img {
+    height: 400px;       /* ajustá a la altura que quieras */
+    object-fit: cover;   /* recorta sin deformar */
+  }
+  .carrusel-limitado {
+    max-width: 700px;    /* ancho máximo del carrusel */
+  }
+</style>
+
+
+
+
+
+
+
+  <<!-- Promociones y Servicios -->
+<section id="promos" class="container py-0">
+  <h2 class="text-center mb-4">Promociones y Servicios</h2>
+  <div class="row g-4">
+    
+    <!-- Service 1 -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">🛠️ Service – $50.000</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✔️ Lavado y desengrasado</li>
+            <li>✔️ Cambio de aceite</li>
+            <li>✔️ Regulación de válvulas</li>
+            <li>✔️ Carburación</li>
+            <li>✔️ Regulación de frenos</li>
+            <li>✔️ Ajuste de cachas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Premium -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Service Premium – $80.000</h5>
+          <p>Incluye Service +</p>
+          <ul class="list-unstyled mt-2">
+            <li>✔️ Cambio de transmisión</li>
+            <li>✔️ Cambio de zapatas de freno (delanteras y traseras)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Mecánico -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Service Mecánico – desde $60.000</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✔️ Lavado y desengrasado</li>
+            <li>✔️ Cambio de distribución</li>
+            <li>✔️ Retenes de válvulas</li>
+            <li>✔️ Cambio de aceite</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pintura completa -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Pintura completa – desde $150.000</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✔️ Pintura de moto completa</li>
+            <li>✔️ En bicapa barnizado</li>
+            <li>✔️ Varios colores disponibles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reparación de llantas -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Reparación de llantas – desde $50.000</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✔️ Cambio de rayos</li>
+            <li>✔️ Reparación de golpes</li>
+            <li>✔️ Pintado completo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <!-- Reparacion Motor -->
+    <div class="col-md-6 col-12">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Reparación de Motor – desde $200.000</h5>
+          <ul class="list-unstyled mt-3">
+            <li>✔️ Cambio de Viela</li>
+            <li>✔️ Cilindro: Rectificacion + aro + Piston</li>
+            <li>✔️ Tapa de cilindros: Guia - valvulas -retenes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="text-center py-2">
+<h4 class="mb-1">Las promos son con materiales y repuestos incluidos</h4>
+  </section>
+      
+</section>
+  <!-- Contacto WhatsApp -->
+  <section class="text-center py-4">
+    <h3 class="mb-3">¿Querés solicitar un turno o comunicarte con nosotros?</h3>
+    <a href="https://wa.me/543816758488" target="_blank" class="btn btn-success btn-lg">
+      Enviar WhatsApp
+    </a>
+  </section>
+  <!-- Redes Sociales -->
+  <section class="text-center py-5 bg-dark text-white">
+    <h3 class="mb-3">¡Seguinos en nuestras redes!</h3>
+    <a href="https://instagram.com/adriangarage" target="_blank" class="btn btn-danger btn-lg m-2">Instagram</a>
+    <a href="https://youtube.com/@adriangarage" target="_blank" class="btn btn-outline-light btn-lg m-2">YouTube</a>
+  </section>
+
+<footer class="bg-secondary text-white text-center py-4">
+ 
+
+  <!-- Dirección -->
+  <p class="fw-bold mb-2">📍 Dirección: Calle 41 Num 650 , Las Talitas-Tucuman-Argentina</p>
+
+  <!-- Google Maps -->
+  <div class="container">
+    <iframe class="map-container"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.2394647641795!2d-65.20074322378515!3d-26.768635687200693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225dbb327caca5%3A0x96d73a0438eac8e6!2sAdrian%20Garage!5e0!3m2!1ses-419!2sar!4v1758392093963!5m2!1ses-419!2sar"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+    <p class="mb-2">© 2025 Adrián Garage - Taller y Restauración</p>
+</footer>
+
+<!-- CSS para el mapa -->
+<style>
+  .map-container {
+    width: 100%;
+    height: 300px;
+    border: 0;
+  }
+</style>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/543816758488" target="_blank" class="whatsapp-float">💬</a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
