@@ -25,7 +25,7 @@
     
     body {
       font-family: 'Poppins', sans-serif;
-      color: #d31818;
+      color: #ece8e8;
     }
 
     /* Header overlay para que el texto contraste sobre la imagen */
@@ -185,6 +185,39 @@
   </div>
 </header>
 
+<!-- Sección YouTube -->
+<section class="text-center py-5 bg-dark text-white">
+  <h2 class="mb-3">🎥 Mirá nuestras restauraciones en YouTube</h2>
+  <p class="mb-4">Seguinos en nuestro canal para ver proyectos, tutoriales y más 👉 
+    <a href="https://youtube.com/@adriangarage" target="_blank" class="fw-bold text-danger">Adrián Garage</a>
+  </p>
+  <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px;">
+    <iframe id="youtubeFrame" 
+            src="" 
+            title="Video de Adrián Garage en YouTube" 
+            allowfullscreen></iframe>
+  </div>
+</section>
+
+<script>
+  // Lista de videos
+  const videos = [
+    "Ykp9WsIrMMQ",
+    "DOklk5zQWaw",
+    "jdgrJXIZZ_M",
+    "_EsHGyWHm9k",
+    "D9hwRsrnhOE"
+  ];
+
+  // Elegir uno aleatorio
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+  // Cargar el video aleatorio en el iframe
+  document.getElementById("youtubeFrame").src = "https://www.youtube.com/embed/" + randomVideo;
+</script>
+
+
+
 <!-- Quiénes Somos -->
 <section class="container py-5 text-center">
   <h2 class="mb-4">Quiénes Somos</h2>
@@ -200,19 +233,17 @@
   </p>
 </section>
 
-<!-- Imagen del taller -->
-<section class="text-center py-4">
-  <img src="foto1.jpg" alt="Taller Adrián Garage" 
-       class="d-block w-100 rounded carrusel-img shadow mx-auto"
-       style="max-width: 700px;">
-</section>
+
 
 <!-- Carrusel de fotos -->
 <section class="container py-4">
-  <h2 class="text-center mb-4">Nuestros Trabajos</h2>
+  
   <div id="carruselMotos" class="carousel slide shadow mx-auto carrusel-limitado" data-bs-ride="carousel" style="max-width: 700px;">
     
     <div class="carousel-inner">
+       <div class="carousel-item active">
+        <img src="foto1.jpg" class="d-block w-100 rounded carrusel-img" alt="Proyecto 1">
+      </div>
       <div class="carousel-item active">
         <img src="foto4.jpg" class="d-block w-100 rounded carrusel-img" alt="Proyecto 1">
       </div>
@@ -406,21 +437,9 @@
 
   <p class="mb-2">© 2025 Adrián Garage - Taller y Restauración</p>
 
-  <!-- Contador de visitas (PHP) -->
-<?php
-$mi_ip = "190.136.56.93"; // tu IP pública
-if ($_SERVER['REMOTE_ADDR'] == $mi_ip) {
-?>
-  <div class="text-center py-3">
-    <h6>Visitas</h6>
-    <a href="https://www.hitwebcounter.com" target="_blank">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=1234567&style=0006&nbdigits=7&type=ip&initCount=1000" 
-           title="contador" alt="contador" border="0" />
-    </a>
-  </div>
-<?php
-}
-?>
+
+
+
 </footer>
 
 <!-- Botón flotante WhatsApp -->
@@ -428,5 +447,31 @@ if ($_SERVER['REMOTE_ADDR'] == $mi_ip) {
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+  window.addEventListener('load', () => {
+    // Lista de tus videos de YouTube
+    const videos = [
+      "Ykp9WsIrMMQ",
+      "DOklk5zQWaw",
+      "jdgrJXIZZ_M",
+      "_EsHGyWHm9k",
+      "D9hwRsrnhOE"
+    ];
+
+    // Elegir uno aleatorio
+    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+    // Insertar el video en el iframe
+    document.getElementById("youtubeFrame").src = "https://www.youtube.com/embed/" + randomVideo;
+
+    // Mostrar el modal automáticamente
+    const modal = new bootstrap.Modal(document.getElementById('youtubeModal'));
+    modal.show();
+  });
+</script>
+
 </body>
 </html>
